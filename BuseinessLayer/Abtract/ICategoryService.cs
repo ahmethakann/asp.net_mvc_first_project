@@ -10,6 +10,7 @@ namespace BuseinessLayer.Abtract
     public interface ICategoryService
     {
         List<Category> GetList();
+        
         void CategoryAdd(Category category);
     }
 }
