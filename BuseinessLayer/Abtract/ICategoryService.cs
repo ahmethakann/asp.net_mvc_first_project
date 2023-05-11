@@ -5,9 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace BuseinessLayer.Abtract
 {
-    public interface IHeadingDal : IRepository<Heading>
+    public interface ICategoryService
     {
+        List<Category> GetList();
+        void CategoryAdd(Category category);
     }
 }

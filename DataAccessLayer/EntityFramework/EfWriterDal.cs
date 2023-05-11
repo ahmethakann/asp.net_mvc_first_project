@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BuseinessLayer
+namespace DataAccessLayer.EntityFramework
 {
-    public class Class1
+    class EfWriterDal
     {
     }
 }
