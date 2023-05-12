@@ -26,11 +26,13 @@ namespace hakan_deneme.Controllers
             var categoryvalues = cm.GetList();
             return View(categoryvalues);
         }
+        
         [HttpGet]
         public ActionResult AddCategory()
         {
             return View();
         }
+        
         [HttpPost]
         public ActionResult AddCategory(Category p)
         {
@@ -39,7 +41,7 @@ namespace hakan_deneme.Controllers
             ValidationResult results = categoryValidator.Validate(p);
             if (results.IsValid)
             {
-                cm.CategoryAddBL(p);
+                cm.CategoryAdd(p);
                 return RedirectToAction("GetCategoryList");
             }
             else

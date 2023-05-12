@@ -22,13 +22,22 @@ namespace DataAccessLayer.Concrete.Repositories
         
         public void Delete(T p)
         {
-            _object.Remove(p);
+            var removedEntity = c.Entry(p);
+            removedEntity.State = EntityState.Deleted
+            // _object.Remove(p);
             c.SaveChanges();
+        }
+
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            return _object.SingleOrDefault(filter);
         }
 
         public void Insert(T p)
         {
-            _object.Add(p);
+            var addedEntity = c.Entry(p);
+            addedEntity.State = EntityState.Added;
+            // _object.Add(p);
             c.SaveChanges();
         }
 
