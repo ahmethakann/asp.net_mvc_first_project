@@ -61,10 +61,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abtract\ICategoryService.cs" />
+    <Compile Include="Abtract\IHeadingService.cs" />
+    <Compile Include="Abtract\IWriterService.cs" />
     <Compile Include="Concrete\CategoryManager.cs" />
-    <Compile Include="Concrete\Insert.cs" />
+    <Compile Include="Concrete\HeadingManager.cs" />
+    <Compile Include="Concrete\WriterManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationRules%28FluentValidation%29\CategoryValidator.cs" />
+    <Compile Include="ValidationRules%28FluentValidation%29\WriterValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
